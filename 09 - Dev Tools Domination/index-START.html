@@ -19,28 +19,49 @@
     }
 
     // Regular
+    console.log('hello')
 
     // Interpolated
+    console.log(`Hello, I am ${dogs[0].name}`)
 
     // Styled
+    console.log("%c I am some great text", "font-size:50px;background:red")
 
     // warning!
+    console.warn("THIS IS A WARNING")
 
     // Error :|
+    console.error("I'm broke")
 
     // Info
+    console.info("Crocodiles are cool")
 
     // Testing
+    const p = document.querySelector('p')
+
+    console.assert(1 === 2, "This is not true >:(")
 
     // clearing
+    console.clear()
 
     // Viewing DOM Elements
+    console.dir(p)
 
     // Grouping together
+    dogs.forEach(dog => {
+      console.group(`${dog.name}`)
+      console.log(`This is ${dog.name}`)
+      console.log(`${dog.name} is ${dog.age} years old`)
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`)
+      console.groupEnd(`${dog.name}`)
+    })
 
     // counting
+    console.count('Snickers')
 
     // timing
+    //console.time()
+    //console.timeEnd()
 
   </script>
 </body>
